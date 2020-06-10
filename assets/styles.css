@@ -1,0 +1,113 @@
+#mliyl-project{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+#mliyl-project .mliyl-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+#mliyl-project .mliyl-content{
+  position: absolute;  
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  left: 50%;  
+  height: calc(100% - 50px);
+  width: 72%;
+}
+#mliyl-project .mliyl-rblock{
+  background-color: #ff00a1;
+  height: 100%;
+  width: 21%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+#mliyl-project .mliyl-icon{
+  position: absolute;
+  transform: translate(-50%,-100%);
+  -webkit-transform: translate(-50%,-100%);
+  -ms-transform: translate(-50%,-100%);
+  -moz-transform: translate(-50%,-100%);
+  -o-transform: translate(-50%,-100%);  
+  top: 93.5%;
+  left: 50%;
+  width: 175px;
+  display: block;
+}
+#mliyl-project .mliyl-lblock{
+  display: inline-block;
+  vertical-align: bottom;
+  width: 78.5%;
+  position: relative;
+  bottom: 0;
+}
+#mliyl-project .mliyl-info{
+  position: relative;
+  background-color: #252626;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: white;
+  height: 290px;
+}
+#mliyl-project .mliyl-logo{
+  position: absolute;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  top: 50%;
+  left: 5.5%;
+  width: 26%;
+}
+#mliyl-project .mliyl-close{  
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  cursor: pointer;
+}
+#mliyl-project .mliyl-close:hover,
+#mliyl-project .mliyl-contact img:hover{
+  opacity: .8;
+}
+#mliyl-project .mliyl-contact{
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+}
+#mliyl-project .mliyl-contact a + a{
+  margin-left: 15px;
+}
+#mliyl-project .mliyl-contact img{
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+#mliyl-project .mliyl-text{
+  background-color: #c1f210;
+  color: #000;
+  font-size: 28px;
+  line-height: 45px;
+  padding: 32px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 20px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+#mliyl-project .mliyl-text a{
+  color: #001dff;
+  text-decoration: none;
+}

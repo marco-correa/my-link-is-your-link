@@ -10,10 +10,10 @@
     background-color: aquamarine;
   }
 </style>
-<body>
-  
-  
+<body> 
+
   <div id="mliyl-project" data-link-portfolio="http://www.google.com/"></div>
-  <script src="mliyl-project.js" type="text/javascript"></script>
+  <script src="project.js" type="text/javascript"></script>
+  
 </body>
 </html>
