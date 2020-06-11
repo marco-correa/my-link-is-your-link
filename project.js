@@ -4,7 +4,7 @@
 
 (function() {
   var head = document.querySelector('head');
-  head.innerHTML = head.innerHTML + ('<link rel="stylesheet" href="assets/styles.css"></link>');
+  head.innerHTML = head.innerHTML + ('<link rel="stylesheet" href="https://mylinkisyourlink.herokuapp.com/assets/styles.css"></link>');
   head.innerHTML = head.innerHTML + ('<link rel="stylesheet" href="https://use.typekit.net/aap5wjp.css"></link>');
   
   var languages = {
