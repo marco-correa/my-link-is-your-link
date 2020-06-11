@@ -1,7 +1,7 @@
 (function() {
   var head = document.querySelector('head');
   head.innerHTML = head.innerHTML + ('<link rel="stylesheet" href="assets/styles.css"></link>');
-  head.innerHTML = head.innerHTML + ('<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"></link>');
+  head.innerHTML = head.innerHTML + ('<link rel="stylesheet" href="https://use.typekit.net/aap5wjp.css"></link>');
   
   var widget = document.querySelector('#mliyl-project');
   var linkPortfolio = widget.dataset.linkPortfolio;

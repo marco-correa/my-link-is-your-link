@@ -6,6 +6,11 @@
   left: 0;
   z-index: 1000;
 }
+@media screen and (max-width: 850px){
+  #mliyl-project{
+    display: none;
+  }
+}
 #mliyl-project .mliyl-overlay{
   position: absolute;
   top: 0;
@@ -23,8 +28,9 @@
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   left: 50%;  
-  height: calc(100% - 50px);
-  width: 72%;
+  height: 97%;
+  width: 90%;
+  max-width: 1100px;
 }
 #mliyl-project .mliyl-rblock{
   background-color: #ff00a1;
@@ -43,7 +49,7 @@
   -o-transform: translate(-50%,-100%);  
   top: 93.5%;
   left: 50%;
-  width: 175px;
+  width: 140px;
   display: block;
 }
 #mliyl-project .mliyl-lblock{
@@ -59,7 +65,7 @@
   margin-left: 20px;
   margin-bottom: 20px;
   color: white;
-  height: 290px;
+  height: 230px;
 }
 #mliyl-project .mliyl-logo{
   position: absolute;
@@ -69,16 +75,17 @@
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   top: 50%;
-  left: 5.5%;
-  width: 26%;
+  left: 50px;
+  width: 200px;
 }
 #mliyl-project .mliyl-close{  
   position: absolute;
   top: 30px;
-  right: 60px;
+  right: 45px;
   -webkit-transition: opacity .2s ease;
   transition: opacity .2s ease;
   cursor: pointer;
+  width: 30px;
 }
 #mliyl-project .mliyl-close:hover,
 #mliyl-project .mliyl-contact img:hover{
@@ -86,8 +93,12 @@
 }
 #mliyl-project .mliyl-contact{
   position: absolute;
-  right: 60px;
   bottom: 60px;
+  right: 45px;
+}
+#mliyl-project .mliyl-contact a{
+  display: inline-block;
+  vertical-align: middle;
 }
 #mliyl-project .mliyl-contact a + a{
   margin-left: 15px;
@@ -96,16 +107,24 @@
   -webkit-transition: opacity .2s ease;
   transition: opacity .2s ease;
 }
+#mliyl-project .mliyl-site{
+  width: 25px;
+}
+#mliyl-project .mliyl-mail{
+  width: 30px;
+}
 #mliyl-project .mliyl-text{
   background-color: #c1f210;
   color: #000;
   font-size: 28px;
-  line-height: 45px;
-  padding: 32px;
-  font-family: 'Roboto', sans-serif;
+  line-height: 28px;
+  padding: 34px 44px;  
   margin-left: 20px;
-  letter-spacing: 1.6px;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  font-family: kazimir, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 #mliyl-project .mliyl-text a{
   color: #001dff;
