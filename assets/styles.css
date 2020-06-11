@@ -28,9 +28,14 @@
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   left: 50%;  
-  height: 97%;
+  height: 77%;
   width: 90%;
   max-width: 1100px;
+}
+@media screen and (max-height: 800px){
+  #mliyl-project .mliyl-content{
+    height: 97%;
+  }
 }
 #mliyl-project .mliyl-rblock{
   background-color: #ff00a1;
