@@ -1,6 +1,6 @@
 (function() {
   var head = document.querySelector('head');
-  head.innerHTML = head.innerHTML + ('<link rel="stylesheet" href="assets/styles.css"></link>');
+  head.innerHTML = head.innerHTML + ('<link rel="stylesheet" href="https://mylinkisyourlink.herokuapp.com/assets/styles.css"></link>');
   head.innerHTML = head.innerHTML + ('<link rel="stylesheet" href="https://use.typekit.net/aap5wjp.css"></link>');
   
   var widget = document.querySelector('#mliyl-project');
@@ -11,19 +11,19 @@
     +"<div class='mliyl-content'>"
 
     +"<div class='mliyl-rblock'>"
-      +"<img src='assets/images/icon.png' class='mliyl-icon'>"
+      +"<img src='https://mylinkisyourlink.herokuapp.com/assets/images/icon.png' class='mliyl-icon'>"
     +"</div>"
 
     +"<div class='mliyl-lblock'>"
       +"<div class='mliyl-info'>"
-        +"<img src='assets/images/logo.png' class='mliyl-logo'>"
-        +"<img src='assets/images/close.png' class='mliyl-close'>"
+        +"<img src='https://mylinkisyourlink.herokuapp.com/assets/images/logo.png' class='mliyl-logo'>"
+        +"<img src='https://mylinkisyourlink.herokuapp.com/assets/images/close.png' class='mliyl-close'>"
         +"<div class='mliyl-contact'>"
           +"<a href='https://mylinkisyourlink.com/' target='_blank'>"
-            +"<img src='assets/images/site.png' class='mliyl-site'>"
+            +"<img src='https://mylinkisyourlink.herokuapp.com/assets/images/site.png' class='mliyl-site'>"
           +"</a>"
           +"<a href='mailto:mylinkisyourlink@gmail.com'>"
-            +"<img src='assets/images/mail.png' class='mliyl-mail'>"
+            +"<img src='https://mylinkisyourlink.herokuapp.com/assets/images/mail.png' class='mliyl-mail'>"
           +"</a>"        
         +"</div>"        
       +"</div>"
