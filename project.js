@@ -47,6 +47,6 @@
     document.querySelector('#mliyl-project').remove();
   }
 
-  document.querySelector(".mliyl-overlay").click= clearWidget;
-  document.querySelector(".mliyl-close").addEventListener("click", clearWidget);  
+  document.querySelector(".mliyl-overlay").addEventListener("click", clearWidget);
+  document.querySelector(".mliyl-close").addEventListener("click", clearWidget);
 })();
