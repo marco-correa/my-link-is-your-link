@@ -134,7 +134,10 @@
 #mliyl-project .mliyl-text a{
   color: #001dff;
   text-decoration: none;
+  border: none;
 }
 #mliyl-project .mliyl-text a:hover{
   color: #001dff;
+  text-decoration: none;
+  border: none;
 }
