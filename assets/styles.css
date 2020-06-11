@@ -135,9 +135,14 @@
   color: #001dff;
   text-decoration: none;
   border: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: border .5s ease-out;
+  -moz-transition: border .5s ease-out;
+  -o-transition: border .5s ease-out;
+  transition: border .5s ease-out;
 }
 #mliyl-project .mliyl-text a:hover{
   color: #001dff;
   text-decoration: none;
-  border: none;
+  border-bottom-color: #001dff;
 }
