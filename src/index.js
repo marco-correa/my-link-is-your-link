@@ -2,14 +2,14 @@
   GitHub: https://github.com/marco-correa/my-link-is-your-link 
   Authour: Marco Correa
 */
-import './assets/styles.scss';
+import './assets/styles-v2.scss';
 
 const $ = document.querySelector.bind(document);
 
 const head = $('head');
 head.innerHTML = `
     ${head.innerHTML}
-    <link rel="stylesheet" href="https://mylinkisyourlink.herokuapp.com/assets/styles.css"></link>
+    <link rel="stylesheet" href="assets/styles.css"></link>
     <link rel="stylesheet" href="https://use.typekit.net/aap5wjp.css"></link>
   `;
 
@@ -31,18 +31,25 @@ widget.innerHTML = `
         <img src='https://mylinkisyourlink.herokuapp.com/assets/images/icon.png' class='mliyl-icon'>
       </div>
       <div class='mliyl-lblock'>
-        <div class='mliyl-info'>
-          <img src='https://mylinkisyourlink.herokuapp.com/assets/images/logo.png' class='mliyl-logo'>
-          <img src='https://mylinkisyourlink.herokuapp.com/assets/images/close.png' class='mliyl-close'>
-          <div class='mliyl-contact'>
-            <a href='https://mylinkisyourlink.com/' target='_blank'>
-              <img src='https://mylinkisyourlink.herokuapp.com/assets/images/site.png' class='mliyl-site'>
-            </a>
-            <a href='mailto:mylinkisyourlink@gmail.com'>
-              <img src='https://mylinkisyourlink.herokuapp.com/assets/images/mail.png' class='mliyl-mail'>
-            </a>
+        <div class='wrapper-mobile'>
+          <div class='mliyl-icon-mobile'>
+            <img src='https://mylinkisyourlink.herokuapp.com/assets/images/icon.png' class='mliyl-icon'>
+          </div>
+          
+          <div class='mliyl-info'>
+            <img src='https://mylinkisyourlink.herokuapp.com/assets/images/logo.png' class='mliyl-logo'>
+            <img src='https://mylinkisyourlink.herokuapp.com/assets/images/close.png' class='mliyl-close'>
+            <div class='mliyl-contact'>
+              <a href='https://mylinkisyourlink.com/' target='_blank'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/site.png' class='mliyl-site'>
+              </a>
+              <a href='mailto:mylinkisyourlink@gmail.com'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/mail.png' class='mliyl-mail'>
+              </a>
+            </div>
           </div>
         </div>
+
         <div class='mliyl-text ${languageSelected}'>${textSelected}</div>
       </div>
     </div>`;
