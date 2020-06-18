@@ -174,16 +174,19 @@
 
       .wrapper-options{
         display: none;
-
+        
         @media screen and (max-width: 800px){
           display: flex;
           justify-content: space-between;
           align-items: center;
         }
+        a{
+        display: inline-block;
+        }
 
         .mliyl-site-mobile{
           display: inline-block;
-          width: 35px;
+          width: 33px;
           vertical-align: middle;
           @media screen and (max-width: 640px){
             width: 6vw;
@@ -191,15 +194,16 @@
         }
         .mliyl-mail-mobile{
           display: inline-block;
-          width: 43px;
+          width: 41px;
           vertical-align: middle;
           margin-left: 18px;
           @media screen and (max-width: 640px){
             width: 7.3vw;
+            margin-left: 2vw;
           }
         }
         .mliyl-close-mobile{
-          width: 6vw;
+          width: 30px;
           @media screen and (max-width: 640px){
             width: 6vw;
           }
