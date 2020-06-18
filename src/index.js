@@ -2,14 +2,14 @@
   GitHub: https://github.com/marco-correa/my-link-is-your-link 
   Authour: Marco Correa
 */
-import './assets/styles-v2.scss';
+import './assets/styles.scss';
 
 const $ = document.querySelector.bind(document);
 
 const head = $('head');
 head.innerHTML = `
     ${head.innerHTML}
-    <link rel="stylesheet" href="assets/styles.css"></link>
+    <link rel="stylesheet" href="https://mylinkisyourlink.herokuapp.com/assets/styles.css"></link>
     <link rel="stylesheet" href="https://use.typekit.net/aap5wjp.css"></link>
   `;
 
@@ -50,7 +50,20 @@ widget.innerHTML = `
           </div>
         </div>
 
-        <div class='mliyl-text ${languageSelected}'>${textSelected}</div>
+        <div class='wrapper-text'>
+          <div class='wrapper-options'>
+            <div classs='wrapper-contact'>
+              <a href='https://mylinkisyourlink.com/' target='_blank'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/site-m.png' class='mliyl-site-mobile'>
+              </a>
+              <a href='mailto:mylinkisyourlink@gmail.com'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/mail-m.png' class='mliyl-mail-mobile'>
+              </a>              
+            </div>          
+            <img src='https://mylinkisyourlink.herokuapp.com/assets/images/close-m.png' class='mliyl-close-mobile'>
+          </div>
+          <div class='mliyl-text ${languageSelected}'>${textSelected}</div>
+        </div>
       </div>
     </div>`;
 
@@ -60,3 +73,4 @@ function clearWidget() {
 
 $('.mliyl-overlay').addEventListener('click', clearWidget);
 $('.mliyl-close').addEventListener('click', clearWidget);
+$('.mliyl-close-mobile').addEventListener('click', clearWidget);
