@@ -6,6 +6,9 @@
   left: 0;
   z-index: 100000;
   
+  img{
+    margin: 0;
+  }
   .mliyl-overlay{
     position: absolute;
     top: 0;
@@ -112,6 +115,8 @@
       
       .mliyl-logo{
         width: 200px;
+        margin: 0 auto 0 0;
+        display: block;      
 
         @media screen and (max-width: 800px){
           width: 60%;
@@ -130,7 +135,7 @@
         }
       }
       .mliyl-close:hover,
-      img:hover{
+      img:not(.mliyl-logo):hover{
         opacity: .8;
       }
       .mliyl-contact{
