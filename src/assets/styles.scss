@@ -28,7 +28,7 @@
     display: block !important;
 
     @media screen and (max-height: 850px){  
-      height: 97%;
+      height: 85%;
     }  
     @media screen and (max-width: 950px){
       width: 97%;
@@ -120,6 +120,7 @@
 
         @media screen and (max-width: 800px){
           width: 60%;
+          margin: 0;
         }
       }
       .mliyl-close{  
