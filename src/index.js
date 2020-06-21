@@ -3,6 +3,7 @@
   Authour: Marco Correa
 */
 import './assets/styles.scss';
+import getPortfolio from './portfolios';
 
 const $ = document.querySelector.bind(document);
 
@@ -15,14 +16,20 @@ head.innerHTML = `
 
 const widget = $('#mliyl-project');
 const linkPortfolio = widget.dataset.linkPortfolio;
-
-const languages = {
-  pt: `⚠ <span style='text-decoration: line-through;'>Obrigado por acessar meu portfolio</span>. Eu doei meus acessos para o site de um profissional que está sem trabalho graças à crise do Covid-⓵⑨. e, nesse ℳomento, precisa mais do que eu. Quem sabe você não ©ontrata el☒? <a target='_blank' href='${linkPortfolio}'>☞ Clica aqui e vai na fé, que essx criativ☆ tem um puta portfolio.</a>`,
-  en: `⚠ <span style='text-decoration: line-through;'> Thanks for popping by</span>. I donated my portfolio's views to the site of a creative who's lost his job because of the covid-⓵⑨ crisis. During these tough times, they need ℳore than just my help. Who knows you could hire them. <a target='_blank' href='${linkPortfolio}'>☞ Click here and go for it. Their portfolio is also very g☆od.</a>`
-};
-
 const languageSelected = widget.dataset.language || 'pt';
-const textSelected = languages[languageSelected];
+
+let textSelected;
+if (!!linkPortfolio) {
+  const languages = {
+    pt: `⚠ <span style='text-decoration: line-through;'>Obrigado por acessar meu portfolio</span>. Eu doei meus acessos para o site de um profissional que está sem trabalho graças à crise do Covid-⓵⑨. e, nesse ℳomento, precisa mais do que eu. Quem sabe você não ©ontrata el☒? <a target='_blank' href='${linkPortfolio}'>☞ Clica aqui e vai na fé, que essx criativ☆ tem um puta portfolio.</a>`,
+    en: `⚠ <span style='text-decoration: line-through;'> Thanks for popping by</span>. I donated my portfolio's views to the site of a creative who's lost his job because of the covid-⓵⑨ crisis. During these tough times, they need ℳore than just my help. Who knows you could hire them. <a target='_blank' href='${linkPortfolio}'>☞ Click here and go for it. Their portfolio is also very g☆od.</a>`
+  };
+
+  textSelected = languages[languageSelected];
+} else {
+  const { nome, funcao, genero, link } = getPortfolio();
+  textSelected = `${nome} - ${funcao} - ${genero} - ${link}`;
+}
 
 widget.innerHTML = `
     <div class='mliyl-overlay'></div>
