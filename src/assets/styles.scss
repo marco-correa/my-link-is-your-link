@@ -141,6 +141,8 @@
         position: absolute;
         bottom: 60px;
         right: 45px;
+        display: flex;
+        align-items: center;
 
         a {
           display: inline-block;
@@ -165,8 +167,6 @@
           width: 30px;
         }
         .mliyl-text-more {
-          position: relative;
-          top: -4px;
           display: inline-block;
           vertical-align: middle;
           margin: 0;
