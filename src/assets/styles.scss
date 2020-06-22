@@ -1,15 +1,15 @@
-#mliyl-project{
+#mliyl-project {
   position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 100000;
-  
-  img{
+
+  img {
     margin: 0;
   }
-  .mliyl-overlay{
+  .mliyl-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,27 +18,26 @@
     background-color: #000;
     opacity: 0.5;
   }
-  .mliyl-content{
-    position: absolute;  
-    transform: translateX(-50%);  
-    left: 50%;  
+  .mliyl-content {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
     height: 77%;
     width: 90%;
     max-width: 1100px;
     display: block !important;
 
-    @media screen and (max-height: 850px){  
+    @media screen and (max-height: 850px) {
       height: 85%;
-    }  
-    @media screen and (max-width: 950px){
+    }
+    @media screen and (max-width: 950px) {
       width: 97%;
-    } 
-    @media screen and (max-width: 800px){
+    }
+    @media screen and (max-width: 800px) {
       width: 95%;
-    } 
-
+    }
   }
-  .mliyl-rblock{
+  .mliyl-rblock {
     background-color: #ff00a1;
     height: 100%;
     width: 21%;
@@ -46,30 +45,30 @@
     vertical-align: middle;
     position: relative;
 
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
       display: none;
     }
-    .mliyl-icon{
+    .mliyl-icon {
       position: absolute;
-      transform: translate(-50%,-100%);
+      transform: translate(-50%, -100%);
       top: 93.5%;
       left: 50%;
       width: 140px;
       display: block;
     }
   }
-  .mliyl-lblock{
+  .mliyl-lblock {
     display: inline-block;
     vertical-align: bottom;
     width: 78%;
-        
-    @media screen and (max-width: 800px){
+
+    @media screen and (max-width: 800px) {
       width: 100%;
       display: block;
     }
-    
-    @media screen and (max-width: 800px){
-      .wrapper-mobile{
+
+    @media screen and (max-width: 800px) {
+      .wrapper-mobile {
         display: flex;
         justify-content: space-between;
         margin-bottom: 4%;
@@ -77,10 +76,10 @@
       }
     }
 
-    .mliyl-icon-mobile{
+    .mliyl-icon-mobile {
       display: none;
 
-      @media screen and (max-width: 800px){
+      @media screen and (max-width: 800px) {
         background-color: #ff00a1;
         width: 48.5%;
         box-sizing: border-box;
@@ -88,13 +87,12 @@
         align-items: center;
         justify-content: center;
 
-        .mliyl-icon{
+        .mliyl-icon {
           width: 40%;
         }
       }
-
     }
-    .mliyl-info{
+    .mliyl-info {
       position: relative;
       background-color: #252626;
       margin-left: 20px;
@@ -103,7 +101,7 @@
       height: auto;
       padding: 57px 44px;
 
-      @media screen and (max-width: 800px){
+      @media screen and (max-width: 800px) {
         margin: 0;
         width: 48.5%;
         display: flex;
@@ -112,111 +110,138 @@
         padding: 0;
         box-sizing: border-box;
       }
-      
-      .mliyl-logo{
+
+      .mliyl-logo {
         width: 200px;
         margin: 0 auto 0 0;
-        display: block;      
+        display: block;
 
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 800px) {
           width: 60%;
           margin: 0;
         }
       }
-      .mliyl-close{  
+      .mliyl-close {
         position: absolute;
         top: 30px;
-        right: 45px;  
-        transition: opacity .2s ease;
+        right: 45px;
+        transition: opacity 0.2s ease;
         cursor: pointer;
         width: 30px;
-    
-        @media screen and (max-width: 800px){
+
+        @media screen and (max-width: 800px) {
           display: none;
         }
       }
       .mliyl-close:hover,
-      img:not(.mliyl-logo):hover{
-        opacity: .8;
+      img:not(.mliyl-logo):hover {
+        opacity: 0.8;
       }
-      .mliyl-contact{
+      .mliyl-contact {
         position: absolute;
         bottom: 60px;
         right: 45px;
-        
-        a{
+
+        a {
           display: inline-block;
           vertical-align: middle;
-    
-          & + a{
-            margin-left: 15px;
-          }
+          margin-left: 15px;
         }
-    
-        img{
-          transition: opacity .2s ease;
+
+        img {
+          transition: opacity 0.2s ease;
         }
-    
-        @media screen and (max-width: 800px){
+
+        @media screen and (max-width: 800px) {
           display: none;
         }
-        .mliyl-site{
+        .mliyl-folder {
+          width: 22px;
+        }
+        .mliyl-site {
           width: 25px;
         }
-        .mliyl-mail{
+        .mliyl-mail {
           width: 30px;
         }
-      }  
+        .mliyl-text-more {
+          position: relative;
+          top: -2px;
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0;
+          font-weight: 400;
+          font-size: 13px;
+          font-family: kazimir, sans-serif;
+          color: #c1f210;
+          opacity: 0;
+          transition: opacity 0.7s ease;
+
+          &.visible {
+            opacity: 1;
+          }
+        }
+      }
     }
-    .wrapper-text{
+    .wrapper-text {
       background-color: #c1f210;
       padding: 34px 44px;
       margin-left: 20px;
 
-      @media screen and (max-width: 800px){
+      @media screen and (max-width: 800px) {
         margin-left: 0;
         padding: 4vw 6vw 6vw;
       }
 
-      .wrapper-options{
+      .wrapper-options {
         display: none;
-        
-        @media screen and (max-width: 800px){
+
+        @media screen and (max-width: 800px) {
           display: flex;
           justify-content: space-between;
           align-items: center;
         }
-        a{
-        display: inline-block;
+        a {
+          display: inline-block;
         }
 
-        .mliyl-site-mobile{
+        .mliyl-site-mobile {
           display: inline-block;
           width: 33px;
           vertical-align: middle;
-          @media screen and (max-width: 640px){
+          @media screen and (max-width: 640px) {
             width: 6vw;
           }
         }
-        .mliyl-mail-mobile{
+        .mliyl-mail-mobile {
           display: inline-block;
           width: 41px;
           vertical-align: middle;
           margin-left: 18px;
-          @media screen and (max-width: 640px){
+          @media screen and (max-width: 640px) {
             width: 7.3vw;
             margin-left: 2vw;
           }
         }
-        .mliyl-close-mobile{
+        .mliyl-folder-mobile {
+          display: inline-block;
+          width: 27px;
+          vertical-align: middle;
+          margin-left: 18px;
+          @media screen and (max-width: 640px) {
+            width: 5vw;
+            margin-left: 2.3vw;
+          }
+        }
+        .mliyl-close-mobile {
           width: 30px;
-          @media screen and (max-width: 640px){
+          @media screen and (max-width: 640px) {
             width: 6vw;
           }
         }
       }
     }
-    .mliyl-text{
+    .mliyl-text {
       color: #000;
       font-size: 28px;
       line-height: 28px;
@@ -224,11 +249,15 @@
       font-family: kazimir, sans-serif;
       font-weight: 400;
       text-align: left;
-  
-      &.pt{ letter-spacing: 1px; }
-      &.en{ letter-spacing: .4px; }
-      
-      a{
+
+      &.pt {
+        letter-spacing: 1px;
+      }
+      &.en {
+        letter-spacing: 0.4px;
+      }
+
+      a {
         font-family: kazimir, sans-serif;
         font-weight: 400;
         font-size: 28px;
@@ -238,31 +267,31 @@
         background-color: transparent;
         line-height: inherit;
         text-align: left;
-      
-        &:hover{
+
+        &:hover {
           color: #001dff;
           text-decoration: underline;
           border: none;
           background-color: transparent;
         }
 
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 800px) {
           font-size: 3.7vw;
           line-height: 4vw;
         }
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 600px) {
           font-size: 4.8vw;
           line-height: 4.8vw;
         }
       }
 
-      @media screen and (max-width: 800px){
+      @media screen and (max-width: 800px) {
         margin-left: 0;
         margin-top: 4vw;
         font-size: 3.7vw;
         line-height: 4vw;
       }
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 600px) {
         font-size: 4.8vw;
         line-height: 4.8vw;
       }

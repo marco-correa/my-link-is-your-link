@@ -16,13 +16,19 @@ head.innerHTML = `
 const widget = $('#mliyl-project');
 const linkPortfolio = widget.dataset.linkPortfolio;
 
-const languages = {
-  pt: `⚠ <span style='text-decoration: line-through;'>Obrigado por acessar meu portfolio</span>. Eu doei meus acessos para o site de um profissional que está sem trabalho graças à crise do Covid-⓵⑨. e, nesse ℳomento, precisa mais do que eu. Quem sabe você não ©ontrata el☒? <a target='_blank' href='${linkPortfolio}'>☞ Clica aqui e vai na fé, que essx criativ☆ tem um puta portfolio.</a>`,
-  en: `⚠ <span style='text-decoration: line-through;'> Thanks for popping by</span>. I donated my portfolio's views to the site of a creative who's lost his job because of the covid-⓵⑨ crisis. During these tough times, they need ℳore than just my help. Who knows you could hire them. <a target='_blank' href='${linkPortfolio}'>☞ Click here and go for it. Their portfolio is also very g☆od.</a>`
+const content = {
+  pt: {
+    portfolios: 'Conheça mais <br>profissionais disponíveis.',
+    text: `⚠ <span style='text-decoration: line-through;'>Obrigado por acessar meu portfolio</span>. Eu doei meus acessos para o site de um profissional que está sem trabalho graças à crise do Covid-⓵⑨. e, nesse ℳomento, precisa mais do que eu. Quem sabe você não ©ontrata el☒? <a target='_blank' href='${linkPortfolio}'>☞ Clica aqui e vai na fé, que essx criativ☆ tem um puta portfolio.</a>`
+  },
+  en: {
+    portfolios: 'More available <br>creatives.',
+    text: `⚠ <span style='text-decoration: line-through;'> Thanks for popping by</span>. I donated my portfolio's views to the site of a creative who's lost his job because of the covid-⓵⑨ crisis. During these tough times, they need ℳore than just my help. Who knows you could hire them. <a target='_blank' href='${linkPortfolio}'>☞ Click here and go for it. Their portfolio is also very g☆od.</a>`
+  }
 };
 
-const languageSelected = widget.dataset.language || 'pt';
-const textSelected = languages[languageSelected];
+const language = widget.dataset.language || 'pt';
+const { text, portfolios } = content[language];
 
 widget.innerHTML = `
     <div class='mliyl-overlay'></div>
@@ -40,11 +46,15 @@ widget.innerHTML = `
             <img src='https://mylinkisyourlink.herokuapp.com/assets/images/logo.png' class='mliyl-logo'>
             <img src='https://mylinkisyourlink.herokuapp.com/assets/images/close.png' class='mliyl-close'>
             <div class='mliyl-contact'>
+              <p class="mliyl-text-more">☆ ${portfolios}</p>
+              <a href='https://docs.google.com/spreadsheets/u/2/d/1Ajf8vT-g5Z77ZK__LcF1pzJb-SqQKhL7e5pAGQTuNgE/edit' target='_blank'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/folder.png' class='mliyl-folder' alt='Portfolios'>
+              </a>
               <a href='https://mylinkisyourlink.com/' target='_blank'>
-                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/site.png' class='mliyl-site'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/site.png' class='mliyl-site' alt='Site'>
               </a>
               <a href='mailto:mylinkisyourlink@gmail.com'>
-                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/mail.png' class='mliyl-mail'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/mail.png' class='mliyl-mail' alt='Email'>
               </a>
             </div>
           </div>
@@ -54,15 +64,18 @@ widget.innerHTML = `
           <div class='wrapper-options'>
             <div classs='wrapper-contact'>
               <a href='https://mylinkisyourlink.com/' target='_blank'>
-                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/site-m.png' class='mliyl-site-mobile'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/site-m.png' class='mliyl-site-mobile' alt='Site'>
               </a>
               <a href='mailto:mylinkisyourlink@gmail.com'>
-                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/mail-m.png' class='mliyl-mail-mobile'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/mail-m.png' class='mliyl-mail-mobile' alt='Email'>
+              </a>
+              <a href='https://docs.google.com/spreadsheets/u/2/d/1Ajf8vT-g5Z77ZK__LcF1pzJb-SqQKhL7e5pAGQTuNgE/edit' target='_blank'>
+                <img src='https://mylinkisyourlink.herokuapp.com/assets/images/folder-m.png' class='mliyl-folder-mobile' alt='Portfolios'>
               </a>              
             </div>          
             <img src='https://mylinkisyourlink.herokuapp.com/assets/images/close-m.png' class='mliyl-close-mobile'>
           </div>
-          <div class='mliyl-text ${languageSelected}'>${textSelected}</div>
+          <div class='mliyl-text ${language}'>${text}</div>
         </div>
       </div>
     </div>`;
@@ -74,3 +87,10 @@ function clearWidget() {
 $('.mliyl-overlay').addEventListener('click', clearWidget);
 $('.mliyl-close').addEventListener('click', clearWidget);
 $('.mliyl-close-mobile').addEventListener('click', clearWidget);
+
+$('.mliyl-folder').addEventListener('mouseenter', () => {
+  $('.mliyl-text-more').classList.add('visible');
+});
+$('.mliyl-folder').addEventListener('mouseleave', () => {
+  $('.mliyl-text-more').classList.remove('visible');
+});
