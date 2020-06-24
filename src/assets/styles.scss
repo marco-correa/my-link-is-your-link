@@ -4,7 +4,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  cursor: auto;
+  cursor: auto !important;
   z-index: 100000;
 
   img {
@@ -149,11 +149,12 @@
           display: flex;
           margin-left: 15px;
           background-color: transparent;
+          cursor: pointer !important;
         }
 
         img {
           transition: opacity 0.2s ease;
-          cursor: pointer;
+          cursor: pointer !important;
         }
 
         @media screen and (max-width: 800px) {
@@ -271,10 +272,10 @@
         background-color: transparent;
         line-height: inherit;
         text-align: left;
-        cursor: pointer;
+        cursor: pointer !important;
 
         &:hover {
-          cursor: pointer;
+          cursor: pointer !important;
           color: #001dff;
           text-decoration: underline;
           border: none;
