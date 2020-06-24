@@ -4,6 +4,7 @@
   width: 100%;
   top: 0;
   left: 0;
+  cursor: auto;
   z-index: 100000;
 
   img {
@@ -147,10 +148,12 @@
         a {
           display: flex;
           margin-left: 15px;
+          background-color: transparent;
         }
 
         img {
           transition: opacity 0.2s ease;
+          cursor: pointer;
         }
 
         @media screen and (max-width: 800px) {
