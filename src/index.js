@@ -116,4 +116,7 @@ $('.mliyl-folder').addEventListener('mouseleave', () => {
 );
 
 ga('create', 'UA-170740676-1', 'auto', 'widgetMLIYL');
-ga('widgetMLIYL.send', 'pageview');
+ga('widgetMLIYL.send', {
+  hitType: 'pageview',
+  page: window.location.origin
+});
