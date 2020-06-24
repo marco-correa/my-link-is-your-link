@@ -271,8 +271,10 @@
         background-color: transparent;
         line-height: inherit;
         text-align: left;
+        cursor: pointer;
 
         &:hover {
+          cursor: pointer;
           color: #001dff;
           text-decoration: underline;
           border: none;
